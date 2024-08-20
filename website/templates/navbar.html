@@ -8,15 +8,18 @@
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           {% if user.is_authenticated %}
           <li class="nav-item">
-            <a class="nav-link" href="{% url 'website:logout' %}">Logout</a>
+            <a class="nav-link" href="{% url 'website:add_record' %}">Add Record</a>
           </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'website:logout' %}">Logout</a>
+            </li> 
           {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'website:home' %}">Login</a>
-          </li> 
-          <li class="nav-item">
-            <a class="nav-link" href="{% url 'website:register' %}">Register</a>
-          </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'website:home' %}">Login</a>
+            </li> 
+            <li class="nav-item">
+              <a class="nav-link" href="{% url 'website:register' %}">Register</a>
+            </li> 
           {% endif %}
         </ul>
        
